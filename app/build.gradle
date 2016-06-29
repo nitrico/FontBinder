@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion vSdkTarget
+    buildToolsVersion vBuildTools
+
+    defaultConfig {
+        applicationId "com.github.nitrico.fontbinderproject"
+        minSdkVersion vSdkMin
+        targetSdkVersion vSdkTarget
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding { enabled true }
+}
+
+buildscript {
+    repositories { mavenCentral() }
+    dependencies { classpath "org.jetbrains.kotlin:kotlin-android-extensions:$vKotlin" }
+}
+
+dependencies {
+    compile "com.android.support:appcompat-v7:$vSupport"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$vKotlin"
+    kapt "com.android.databinding:compiler:$vGradlePlugin"
+    compile project(":fontbinder")
+}
+
+kapt { generateStubs = true }

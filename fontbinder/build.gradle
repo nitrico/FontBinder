@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion vSdkTarget
+    buildToolsVersion vBuildTools
+    defaultConfig { minSdkVersion vSdkMin }
+    dataBinding { enabled true }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$vKotlin"
+    kapt "com.android.databinding:compiler:$vGradlePlugin"
+}
+
+apply from: 'publish.gradle'
