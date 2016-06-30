@@ -7,7 +7,7 @@
 
 ## Usage
 
-Enable Data Binding in your project, add your font files to the `assets\fonts\` directory and initialize the library in the onCreate method of your **Application** class:
+Enable [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html) in your project, add your font files to the `assets\fonts\` directory and initialize the library in the onCreate method of your **Application** class:
 ```java
 // Java
 @Override public void onCreate() {
