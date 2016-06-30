@@ -8,6 +8,7 @@
 ## Usage
 
 Enable [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html) in your project and initialize the library in the onCreate method of your **Application** class:
+
 ```java
 // Java
 @Override public void onCreate() {
@@ -24,6 +25,7 @@ override fun onCreate() {
 ```
 
 Then, you can add `app:font='@{"FontFileNameWithoutExtension"}'` to your TextViews:
+
 ```xml
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -52,8 +54,11 @@ Then, you can add `app:font='@{"FontFileNameWithoutExtension"}'` to your TextVie
 * Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layouts
 * You might want to check [**LastAdapter**](https://github.com/nitrico/LastAdapter) to use it with RecyclerView
  
+
 #### Programmatically
-FontBinder **caches used typefaces** to avoid repeating its creation in the future. To use it programmatically:
+
+FontBinder **automatically caches used typefaces** to avoid repeating its creation in the future. To use it programmatically:
+
 ```java
 // Java
 mTextView.setTypeface(FontBinder.INSTANCE.get("FontFileNameWithoutExtension"));
