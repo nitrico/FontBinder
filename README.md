@@ -23,7 +23,7 @@ override fun onCreate() {
 }
 ```
 
-Then, you can add `app:font='@{"YourFontFileName"}'` to the TextViews in your layout:
+Then, you can add `app:font='@{"YourFontFileName"}'` to your TextViews:
 ```xml
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
