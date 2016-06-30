@@ -20,7 +20,6 @@ object FontBinder {
 
     private lateinit var context: Context
 
-    //@JvmStatic
     fun init(appContext: Context) {
         context = appContext.applicationContext
         val fileList: Array<String>
