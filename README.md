@@ -50,10 +50,10 @@ Then, you can add `app:font='@{"FontFileNameWithoutExtension"}'` to your TextVie
 * Make sure you write the quotation marks in that same way
 * Font files must be located in your `assets\fonts\` folder
 * Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layouts
-* **Used typefaces are cached** to avoid repeating its creation in the future
 * You might want to check [**LastAdapter**](https://github.com/nitrico/LastAdapter) to use it with RecyclerView
  
 #### Programmatically
+FontBinder **caches used typefaces** to avoid repeating its creation in the future. To use it programmatically:
 ```java
 // Java
 mTextView.setTypeface(FontBinder.INSTANCE.get("FontFileNameWithoutExtension"));
