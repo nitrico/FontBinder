@@ -49,7 +49,7 @@ Then, you can add `app:font='@{"YourFontFileName"}'` to the TextViews in your la
 #### Notice:
 * In your layouts, use font file names without extension
 * Make sure you write the quotation marks in that same way
-* Use Data Binding (`DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)`) to inflate your layouts
+* Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layouts
 
 ## Setup
 
