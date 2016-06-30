@@ -7,7 +7,7 @@
 
 ## Usage
 
-Enable [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html) in your project, add your font files to the `assets\fonts\` directory and initialize the library in the onCreate method of your **Application** class:
+Enable [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html) in your project and initialize the library in the onCreate method of your **Application** class:
 ```java
 // Java
 @Override public void onCreate() {
@@ -47,8 +47,9 @@ Then, you can add `app:font='@{"YourFontFileName"}'` to the TextViews in your la
 ```
 
 #### Notice:
-* In your layouts, use font file names without extension
 * Make sure you write the quotation marks in that same way
+* Font files must be located in the the `assets\fonts\` directory
+* In the layout, use font file names without extension
 * Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layouts
 
 ## Setup
