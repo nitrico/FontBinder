@@ -7,24 +7,27 @@ Kotlin fork of **Lisa Wray**'s [fontbinding](https://github.com/lisawray/fontbin
 
 ## Usage
 
-Add your font files to the `assets\fonts\` directory and In your **Application** class:
+Enable Data Binding in your project, add your font files to the `assets\fonts\` directory and initialize the library in the onCreate method of your **Application** class:
 
 ```java
-// if using Java
+// Java
 @Override public void onCreate() {
     super.onCreate();
     FontBinder.INSTANCE.init(this);
 }
 ```
 ```kotlin
-// if using Kotlin
+// Kotlin
 override fun onCreate() {
     super.onCreate()
     FontBinder.init(this)
 }
 ```
 
-Then, in your layout add ```app:font='@{"YourFont"}'```
+Then, in your layout, add `app:font='@{"YourFontFileName"}'` to your TextView.
+* Use font file names without extension
+* Make sure you write the quotation marks in that same way
+* Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layout files.
 
 ## Setup
 
