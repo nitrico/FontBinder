@@ -3,7 +3,7 @@
 
 # FontBinder
 
-Kotlin fork of **Lisa Wray**'s [fontbinding](https://github.com/lisawray/fontbinding) available in JCenter.
+[**Kotlin**](http://kotlinlang.org/) fork of **Lisa Wray**'s [fontbinding](https://github.com/lisawray/fontbinding) available in JCenter.
 
 ## Usage
 
