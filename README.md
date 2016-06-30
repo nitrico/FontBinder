@@ -1,6 +1,6 @@
 [![Download](https://api.bintray.com/packages/moreno/maven/fontbinder/images/download.svg)](https://bintray.com/moreno/maven/fontbinder/_latestVersion)
-[![Size](https://img.shields.io/badge/Size-12KB-e91e63.svg)](http://www.methodscount.com/?lib=com.github.nitrico.fontbinder%3Afontbinder%3A%2B)
-[![License](https://img.shields.io/:License-Apache-orange.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[![Size](https://img.shields.io/badge/Size-12 KB-e91e63.svg)](http://www.methodscount.com/?lib=com.github.nitrico.fontbinder%3Afontbinder%3A%2B)
+[![License](https://img.shields.io/:License-Apache 2.0-orange.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 # FontBinder
 
