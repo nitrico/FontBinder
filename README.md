@@ -1,13 +1,17 @@
 [![Download](https://api.bintray.com/packages/moreno/maven/fontbinder/images/download.svg)](https://bintray.com/moreno/maven/fontbinder/_latestVersion)
-[![License](https://img.shields.io/:License-Apache-orange.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[![Size](https://img.shields.io/badge/Size-12 KB-e91e63.svg)](http://www.methodscount.com/?lib=com.github.nitrico.fontbinder%3Afontbinder%3A%2B)
+[![License](https://img.shields.io/:License-Apache 2.0-orange.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 # FontBinder
 
-[**Kotlin**](http://kotlinlang.org) fork of **Lisa Wray**'s [fontbinding](https://github.com/lisawray/fontbinding) available on JCenter.
+Easy font usage in your XML layouts with Android Data Binding. 
+
+It is a JCenter-added fork of **Lisa Wray**'s [**fontbinding**](https://github.com/lisawray/fontbinding) library written in [**Kotlin**](http://kotlinlang.org).
 
 ## Usage
 
 Enable [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html) in your project and initialize the library in the onCreate method of your **Application** class:
+
 ```java
 // Java
 @Override public void onCreate() {
@@ -23,7 +27,8 @@ override fun onCreate() {
 }
 ```
 
-Then, you can add `app:font='@{"YourFontFileName"}'` to your TextViews:
+Then, you can add `app:font='@{"FontFileNameWithoutExtension"}'` to your TextViews:
+
 ```xml
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -49,9 +54,22 @@ Then, you can add `app:font='@{"YourFontFileName"}'` to your TextViews:
 #### Notice:
 * Make sure you write the quotation marks in that same way
 * Font files must be located in your `assets\fonts\` folder
-* In the layout, use font names without file extension
 * Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layouts
 * You might want to check [**LastAdapter**](https://github.com/nitrico/LastAdapter) to use it with RecyclerView
+ 
+
+#### Programmatically
+
+FontBinder **automatically caches used typefaces** to avoid repeating its creation in the future. To use it programmatically:
+
+```java
+// Java
+mTextView.setTypeface(FontBinder.INSTANCE.get("FontFileNameWithoutExtension"));
+```
+```kotlin
+// Kotlin
+mTextView.typeface = FontBinder["FontFileNameWithoutExtension"]
+```
 
 ## Setup
 
