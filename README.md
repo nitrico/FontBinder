@@ -8,7 +8,6 @@
 ## Usage
 
 Enable Data Binding in your project, add your font files to the `assets\fonts\` directory and initialize the library in the onCreate method of your **Application** class:
-
 ```java
 // Java
 @Override public void onCreate() {
@@ -24,7 +23,29 @@ override fun onCreate() {
 }
 ```
 
-Then, in your layout, add `app:font='@{"YourFontFileName"}'` to your TextView.
+Then, you can add `app:font='@{"YourFontFileName"}'` to the TextViews in your layout:
+```xml
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="Hello World!"
+            app:font='@{"Alegreya-Bold"}' />
+
+    </RelativeLayout>
+
+</layout>
+```
+
 * Use font file names without extension
 * Make sure you write the quotation marks in that same way
 * Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layout files.
