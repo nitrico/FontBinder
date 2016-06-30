@@ -48,8 +48,8 @@ Then, you can add `app:font='@{"YourFontFileName"}'` to your TextViews:
 
 #### Notice:
 * Make sure you write the quotation marks in that same way
-* Font files must be located in the the `assets\fonts\` directory
-* In the layout, use font file names without extension
+* Font files must be located in the the `assets\fonts\` folder
+* In the layout, use font names without file extension
 * Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layouts
 
 ## Setup
