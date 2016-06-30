@@ -3,7 +3,7 @@
 
 # FontBinder
 
-[**Kotlin**](http://kotlinlang.org/) fork of **Lisa Wray**'s [fontbinding](https://github.com/lisawray/fontbinding) available in JCenter.
+[**Kotlin**](http://kotlinlang.org) fork of **Lisa Wray**'s [fontbinding](https://github.com/lisawray/fontbinding) available in JCenter.
 
 ## Usage
 
@@ -51,7 +51,7 @@ Then, you can add `app:font='@{"YourFontFileName"}'` to your TextViews:
 * Font files must be located in your `assets\fonts\` folder
 * In the layout, use font names without file extension
 * Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layouts
-* You might want to use [LastAdapter](https://github.com/nitrico/LastAdapter/) to use it with RecyclerView
+* You might want to check [**LastAdapter**](https://github.com/nitrico/LastAdapter) to use it with RecyclerView
 
 ## Setup
 
