@@ -4,6 +4,7 @@
 # FontBinder
 
 Easy font usage in your XML layouts with Android Data Binding. 
+
 It is a [**Kotlin**](http://kotlinlang.org) fork of **Lisa Wray**'s [fontbinding](https://github.com/lisawray/fontbinding) available on JCenter.
 
 ## Usage
