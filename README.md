@@ -48,9 +48,10 @@ Then, you can add `app:font='@{"YourFontFileName"}'` to your TextViews:
 
 #### Notice:
 * Make sure you write the quotation marks in that same way
-* Font files must be located in the the `assets\fonts\` folder
+* Font files must be located in your `assets\fonts\` folder
 * In the layout, use font names without file extension
 * Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layouts
+* You might want to use [LastAdapter](https://github.com/nitrico/LastAdapter/) to use it with RecyclerView
 
 ## Setup
 
