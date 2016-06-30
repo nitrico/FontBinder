@@ -23,7 +23,7 @@ override fun onCreate() {
 }
 ```
 
-Then, you can add `app:font='@{"YourFontFileName"}'` to your TextViews:
+Then, you can add `app:font='@{"FontFileNameWithoutExtension"}'` to your TextViews:
 ```xml
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -49,9 +49,19 @@ Then, you can add `app:font='@{"YourFontFileName"}'` to your TextViews:
 #### Notice:
 * Make sure you write the quotation marks in that same way
 * Font files must be located in your `assets\fonts\` folder
-* In the layout, use font names without file extension
 * Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layouts
 * You might want to check [**LastAdapter**](https://github.com/nitrico/LastAdapter) to use it with RecyclerView
+ 
+#### Programmatically
+
+FontBinder **caches the used typefaces** to avoid repeating its creation in the future. To use them programmatically:
+```java
+// Java
+mTextView.setTypeface(FontBinder.INSTANCE.get("FontFileNameWithoutExtension"));
+
+// Kotlin
+mTextView.typeface = FontBinder["FontFileNameWithoutExtension"]
+```
 
 ## Setup
 
