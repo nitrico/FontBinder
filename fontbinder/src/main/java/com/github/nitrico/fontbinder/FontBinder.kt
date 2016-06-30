@@ -12,7 +12,7 @@ import java.io.IOException
  */
 object FontBinder {
 
-    private const val TAG = "FontCache"
+    private const val TAG = "FontBinder"
     private const val FONT_DIR = "fonts"
 
     private val cache = mutableMapOf<String, Typeface>()
