@@ -5,7 +5,7 @@
 
 Easy font usage in your XML layouts with Android Data Binding. 
 
-It is a JCenter-added fork of **Lisa Wray**'s [**fontbinding**](https://github.com/lisawray/fontbinding) written in [**Kotlin**](http://kotlinlang.org).
+It is a JCenter-added fork of **Lisa Wray**'s [**fontbinding**](https://github.com/lisawray/fontbinding) library written in [**Kotlin**](http://kotlinlang.org).
 
 ## Usage
 
