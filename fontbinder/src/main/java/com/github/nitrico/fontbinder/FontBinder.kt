@@ -53,7 +53,7 @@ object FontBinder {
         }
     }
 
-    @JvmStatic @BindingAdapter("font")
+    @JvmStatic @BindingAdapter("android:font")
     fun TextView.setFont(fontName: String) { typeface = FontBinder[fontName] }
 
 }

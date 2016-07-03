@@ -1,1 +1,15 @@
-<manifest package="com.github.nitrico.fontbinder" />
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.nitrico.fontbinder" >
+
+    <application>
+
+        <provider
+            android:authorities="${applicationId}.Initializer"
+            android:exported="false"
+            android:enabled="true"
+            android:name=".Initializer" />
+
+    </application>
+
+</manifest>
