@@ -17,7 +17,7 @@ Easy font usage in your Android XML layouts. This is a fork of **Lisa Wray**'s [
 
 ## Usage
 
-Simply use `android:font=...` in your TextViews:
+Simply use `android:font='@{"YourFontFileNameWithoutExtension"}'` in your TextViews:
 
 ```xml
 <layout xmlns:android="http://schemas.android.com/apk/res/android" >
@@ -30,7 +30,7 @@ Simply use `android:font=...` in your TextViews:
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!"
-            android:font='@{"YourFontFileNameWithoutExtension"}' />
+            android:font='@{"Alegreya-Bold"}' />
 
     </RelativeLayout>
 
