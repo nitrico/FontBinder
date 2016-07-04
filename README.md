@@ -4,16 +4,16 @@
 
 # FontBinder
 
-Easy font usage in your XML layouts with Android Data Binding. This is a fork of **Lisa Wray**'s [fontbinding](https://github.com/lisawray/fontbinding) 
+Easy font usage in your XML layouts with Android Data Binding. This is a fork of **Lisa Wray**'s [**fontbinding**](https://github.com/lisawray/fontbinding).
 
-* Available through jCenter
+* Based on [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html)
+* Written in [Kotlin](http://kotlinlang.org)
 * Automatic initialization
 * Automatic typeface caching
 * Homogeneous `android:font` usage
 * Tiny size: **13 KB**
 * Minimum Android SDK: **7**
-* Based on [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html)
-* Written in [Kotlin](http://kotlinlang.org)
+* Available through jCenter
 
 ## Usage
 
