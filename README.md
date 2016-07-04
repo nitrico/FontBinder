@@ -1,5 +1,5 @@
 [![Download](https://api.bintray.com/packages/moreno/maven/fontbinder/images/download.svg)](https://bintray.com/moreno/maven/fontbinder/_latestVersion)
-[![Size](https://img.shields.io/badge/Size-12 KB-e91e63.svg)](http://www.methodscount.com/?lib=com.github.nitrico.fontbinder%3Afontbinder%3A%2B)
+[![Size](https://img.shields.io/badge/Size-13 KB-e91e63.svg)](http://www.methodscount.com/?lib=com.github.nitrico.fontbinder%3Afontbinder%3A%2B)
 [![License](https://img.shields.io/:License-Apache 2.0-orange.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 # FontBinder
@@ -10,41 +10,20 @@ It is a JCenter-added fork of **Lisa Wray**'s [**fontbinding**](https://github.c
 
 ## Usage
 
-Enable [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html) in your project and initialize the library in the onCreate method of your **Application** class:
-
-```java
-// Java
-@Override public void onCreate() {
-    super.onCreate();
-    FontBinder.INSTANCE.init(this);
-}
-```
-```kotlin
-// Kotlin
-override fun onCreate() {
-    super.onCreate()
-    FontBinder.init(this)
-}
-```
-
-Then, you can add `app:font='@{"FontFileNameWithoutExtension"}'` to your TextViews:
+Enable [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html) and the dependency in your `build.gradle` file. Now, you can start using `android:font=...` in your TextViews:
 
 ```xml
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" >
+<layout xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp" >
+        android:layout_height="match_parent" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="32sp"
             android:text="Hello World!"
-            app:font='@{"Alegreya-Bold"}' />
+            android:font='@{"Alegreya-Bold"}' />
 
     </RelativeLayout>
 
@@ -52,15 +31,16 @@ Then, you can add `app:font='@{"FontFileNameWithoutExtension"}'` to your TextVie
 ```
 
 #### Notice:
-* Make sure you write the quotation marks in that same way
+* Make sure you use the `<layout>` tag and write the quotation marks in that same way
 * Font files must be located in your `assets\fonts\` folder
 * Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layouts
+* Android Studio may warn you in the `android:font` line with "unknown attribute". Don't worry
 * You might want to check [**LastAdapter**](https://github.com/nitrico/LastAdapter) to use it with RecyclerView
- 
 
-#### Programmatically
 
-FontBinder **automatically caches used typefaces** to avoid repeating its creation in the future. To use it programmatically:
+#### Cache
+
+FontBinder **automatically caches used typefaces** to avoid recreating them in the future. To use the cached fonts programmatically:
 
 ```java
 // Java
