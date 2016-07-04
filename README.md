@@ -4,23 +4,20 @@
 
 # FontBinder
 
-Easy `android:font` usage in your XML layouts with Android Data Binding.
+Easy font usage in your XML layouts with Android Data Binding. This is a fork of **Lisa Wray**'s [fontbinding](https://github.com/lisawray/fontbinding) 
 
-This is a fork of **Lisa Wray**'s [**fontbinding**](https://github.com/lisawray/fontbinding) 
-
+* Available through jCenter
 * Automatic initialization
 * Automatic typeface caching
 * Homogeneous `android:font` usage
 * Tiny size: **13 KB**
 * Minimum Android SDK: **7**
-* Based on [**Data Binding**](https://developer.android.com/topic/libraries/data-binding/index.html)
-* Written in [**Kotlin**](http://kotlinlang.org)
+* Based on [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html)
+* Written in [Kotlin](http://kotlinlang.org)
 
 ## Usage
 
-Enable Data binding and add the [dependency](https://github.com/nitrico/FontBinder#setup) in your `build.gradle` file.
-
-Now, you can start using `android:font=...` in your TextViews:
+Simply use `android:font=...` in your TextViews:
 
 ```xml
 <layout xmlns:android="http://schemas.android.com/apk/res/android" >
