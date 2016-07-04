@@ -6,11 +6,11 @@ def libGroup = 'com.github.nitrico.' + libName
 def libSite = 'https://github.com/nitrico/' + libName
 def libGit = libSite + '.git'
 def libTracker = libSite + '/issues'
-def libDesc = "Easy font usage in your Android layouts with Data Binding"
+def libDesc = "Easy font usage in your Android XML layouts"
 def libTags = ['android', 'font', 'typeface', 'data binding', 'kotlin']
 
 group = libGroup
-version = '1.0.1'
+version = '1.0.2'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())

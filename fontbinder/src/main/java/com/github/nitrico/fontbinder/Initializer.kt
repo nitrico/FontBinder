@@ -6,7 +6,13 @@ import android.content.Context
 import android.content.pm.ProviderInfo
 import android.net.Uri
 
-class Initializer() : ContentProvider() {
+class Initializer : ContentProvider() {
+
+    companion object {
+        private const val PROVIDER_AUTHORITY = "com.github.nitrico.fontbinder.Initializer"
+        private const val EXCEPTION_MESSAGE = "Incorrect provider authority in manifest. " +
+                "Most likely due to a missing applicationId variable in application\'s build.gradle."
+    }
 
     override fun onCreate(): Boolean {
         FontBinder.init(context.applicationContext)
@@ -14,23 +20,18 @@ class Initializer() : ContentProvider() {
     }
 
     override fun attachInfo(context: Context, info: ProviderInfo) {
-        // So if the authorities equal the library internal ones, the developer forgot to set his applicationId
-        if ("com.github.nitrico.fontbinder.Initializer".equals(info.authority)) {
-            throw IllegalStateException("Incorrect provider authority in manifest. " +
-                    "Most likely due to a missing applicationId variable in application\'s build.gradle.")
-        }
+        if (PROVIDER_AUTHORITY.equals(info.authority)) throw IllegalStateException(EXCEPTION_MESSAGE)
         super.attachInfo(context, info)
     }
 
-    override fun insert(uri: Uri, values: ContentValues) = null
-
-    override fun delete(uri: Uri, selection: String, args: Array<out String>) = 0
-
-    override fun update(uri: Uri, values: ContentValues, selection: String, args: Array<out String>) = 0
-
     override fun getType(uri: Uri) = null
 
-    override fun query(uri: Uri, projection: Array<out String>, selection: String,
-                       args: Array<out String>, order: String) = null
+    override fun query(uri: Uri, p: Array<String>, s: String, a: Array<String>, o: String) = null
+
+    override fun insert(uri: Uri, v: ContentValues) = null
+
+    override fun delete(uri: Uri, s: String, a: Array<String>) = 0
+
+    override fun update(uri: Uri, v: ContentValues, s: String, a: Array<String>) = 0
 
 }

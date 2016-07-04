@@ -20,7 +20,7 @@ object FontBinder {
 
     private lateinit var context: Context
 
-    fun init(appContext: Context) {
+    internal fun init(appContext: Context) {
         context = appContext.applicationContext
         val fileList: Array<String>
         try {
@@ -44,9 +44,8 @@ object FontBinder {
             Log.e(TAG, "Couldn't find font $fontName.")
             return null
         }
-        if (cache.containsKey(fontFilename)) {
-            return cache[fontFilename]
-        } else {
+        if (cache.containsKey(fontFilename)) return cache[fontFilename]
+        else {
             val typeface = Typeface.createFromAsset(context.assets, "$FONT_DIR/$fontFilename")
             cache.put(fontFilename, typeface)
             return typeface
