@@ -1,5 +1,5 @@
 [![Download](https://api.bintray.com/packages/moreno/maven/fontbinder/images/download.svg)](https://bintray.com/moreno/maven/fontbinder/_latestVersion)
-[![Size](https://img.shields.io/badge/Size-13 KB-e91e63.svg)](http://www.methodscount.com/?lib=com.github.nitrico.fontbinder%3Afontbinder%3A%2B)
+[![Size](https://img.shields.io/badge/Size-14 KB-e91e63.svg)](http://www.methodscount.com/?lib=com.github.nitrico.fontbinder%3Afontbinder%3A%2B)
 [![License](https://img.shields.io/:License-Apache 2.0-orange.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 # FontBinder
@@ -11,7 +11,7 @@ Easy font usage in your Android XML layouts. This is a fork of **Lisa Wray**'s [
 * Automatic initialization
 * Automatic font caching
 * Homogeneous `android:font` usage
-* Tiny size: **13 KB**
+* Tiny size: **14 KB**
 * Minimum Android SDK: **7**
 * Available through jCenter
 
@@ -70,7 +70,7 @@ android {
 }
 
 dependencies {
-    compile 'com.github.nitrico.fontbinder:fontbinder:1.0.1'
+    compile 'com.github.nitrico.fontbinder:fontbinder:1.0.2'
 }
 ```
 
