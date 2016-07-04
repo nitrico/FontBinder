@@ -10,7 +10,7 @@ It is a JCenter-added fork of **Lisa Wray**'s [**fontbinding**](https://github.c
 
 ## Usage
 
-Enable [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html) and add the dependency in your `build.gradle` file [see [**Setup**](https://github.com/nitrico/FontBinder#setup)]
+Enable [Data Binding](https://developer.android.com/topic/libraries/data-binding/index.html) and add the [dependency](https://github.com/nitrico/FontBinder#setup) in your `build.gradle` file.
 
 Now, you can start using `android:font=...` in your TextViews:
 
