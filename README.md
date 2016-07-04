@@ -25,7 +25,7 @@ Now, you can start using `android:font=...` in your TextViews:
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!"
-            android:font='@{"Alegreya-Bold"}' />
+            android:font='@{"YourFontFileNameWithoutExtension"}' />
 
     </RelativeLayout>
 
