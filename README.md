@@ -37,10 +37,9 @@ Simply use `android:font=...` in your TextViews:
 </layout>
 ```
 
-#### Notice:
-* Make sure you use the `<layout>` tag and write the quotation marks in that same way
-* Font files must be located in your `assets\fonts\` folder
+* Make sure you use `<layout>` as root tag and write the quotation marks in the right way: `'@{"file"}'` or ```"@{`file`}"```
 * Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layouts
+* Font files must be located in your `assets\fonts\` folder
 * Android Studio may warn you in the `android:font` line with "unknown attribute". Don't worry
 * You might want to check [**LastAdapter**](https://github.com/nitrico/LastAdapter) to use it with RecyclerView
 
