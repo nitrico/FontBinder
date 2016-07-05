@@ -51,7 +51,7 @@ FontBinder **automatically caches used typefaces** to avoid recreating them in t
 
 ```java
 // Java
-mTextView.setTypeface(FontBinder.INSTANCE.get("FontFileNameWithoutExtension"));
+mTextView.setTypeface(FontBinder.get("FontFileNameWithoutExtension"));
 ```
 ```kotlin
 // Kotlin
