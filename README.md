@@ -71,7 +71,7 @@ android {
 }
 
 dependencies {
-    compile 'com.github.nitrico.fontbinder:fontbinder:1.0.2'
+    compile 'com.github.nitrico.fontbinder:fontbinder:1.0.3'
 }
 ```
 
