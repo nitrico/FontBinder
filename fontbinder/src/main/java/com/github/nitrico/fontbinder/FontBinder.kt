@@ -38,7 +38,7 @@ object FontBinder {
 
     fun add(fontName: String, fontFilename: String) = fontMapping.put(fontName, fontFilename)
 
-    operator fun get(fontName: String): Typeface? {
+    @JvmStatic operator fun get(fontName: String): Typeface? {
         val fontFilename = fontMapping[fontName]
         if (fontFilename == null) {
             Log.e(TAG, "Couldn't find font $fontName.")
