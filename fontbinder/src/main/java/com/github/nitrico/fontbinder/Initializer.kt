@@ -6,6 +6,9 @@ import android.content.Context
 import android.content.pm.ProviderInfo
 import android.net.Uri
 
+/**
+ * https://medium.com/@andretietz/auto-initialize-your-android-library-2349daf06920
+ */
 class Initializer : ContentProvider() {
 
     companion object {

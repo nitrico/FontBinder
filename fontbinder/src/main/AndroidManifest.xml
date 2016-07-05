@@ -6,8 +6,8 @@
 
         <provider
             android:authorities="${applicationId}.Initializer"
-            android:exported="false"
             android:enabled="true"
+            android:exported="false"
             android:name=".Initializer" />
 
     </application>

@@ -10,7 +10,7 @@ def libDesc = "Easy font usage in your Android XML layouts"
 def libTags = ['android', 'font', 'typeface', 'data binding', 'kotlin']
 
 group = libGroup
-version = '1.0.2'
+version = '1.0.3'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
