@@ -16,6 +16,25 @@ Easy font usage in your Android XML layouts. This is a fork of **Lisa Wray**'s [
 * Minimum Android SDK: **7**
 * Available through jCenter
 
+
+## Setup
+
+#### Gradle
+
+```gradle
+android {
+    ...
+    dataBinding { 
+        enabled true 
+    }
+}
+
+dependencies {
+    compile 'com.github.nitrico.fontbinder:fontbinder:1.0.3'
+}
+```
+
+
 ## Usage
 
 Simply use `android:font='@{"YourFontFileNameWithoutExtension"}'` in your TextViews:
@@ -58,24 +77,9 @@ mTextView.setTypeface(FontBinder.get("FontFileNameWithoutExtension"));
 mTextView.typeface = FontBinder["FontFileNameWithoutExtension"]
 ```
 
-## Setup
-
-#### Gradle
-
-```gradle
-android {
-    ...
-    dataBinding { 
-        enabled true 
-    }
-}
-
-dependencies {
-    compile 'com.github.nitrico.fontbinder:fontbinder:1.0.3'
-}
-```
 
 ## License
+
 ```txt
 Copyright 2016 Miguel Ángel Moreno
 Copyright 2015 Lisa Wray
