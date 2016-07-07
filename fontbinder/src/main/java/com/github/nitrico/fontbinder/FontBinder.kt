@@ -1,6 +1,7 @@
 package com.github.nitrico.fontbinder
 
 import android.content.Context
+import android.content.res.AssetManager
 import android.databinding.BindingAdapter
 import android.graphics.Typeface
 import android.util.Log
@@ -13,43 +14,40 @@ import java.io.IOException
 object FontBinder {
 
     private const val TAG = "FontBinder"
-    private const val FONT_DIR = "fonts"
+    private const val DIR = "fonts"
 
     private val cache = mutableMapOf<String, Typeface>()
-    private val fontMapping = mutableMapOf<String, String>()
+    private val mapping = mutableMapOf<String, String>()
 
-    private lateinit var context: Context
+    private lateinit var assets: AssetManager
 
-    internal fun init(appContext: Context) {
-        context = appContext.applicationContext
+    internal fun init(context: Context) {
+        assets = context.applicationContext.assets
         val fileList: Array<String>
         try {
-            fileList = context.resources.assets.list(FONT_DIR)
+            fileList = assets.list(DIR)
         } catch (e: IOException) {
-            Log.e(TAG, "Error loading fonts from assets/fonts.")
+            Log.e(TAG, "Error loading fonts from assets/$DIR.")
             return
         }
         for (filename in fileList) {
             val alias = filename.substring(0, filename.lastIndexOf('.'))
-            fontMapping.put(alias, filename)
-            fontMapping.put(alias.toLowerCase(), filename)
+            mapping.put(alias, filename)
+            mapping.put(alias.toLowerCase(), filename)
         }
     }
 
-    fun add(fontName: String, fontFilename: String) = fontMapping.put(fontName, fontFilename)
+    fun add(fontName: String, fontFilename: String) = mapping.put(fontName, fontFilename)
 
-    @JvmStatic operator fun get(fontName: String): Typeface? {
-        val fontFilename = fontMapping[fontName]
-        if (fontFilename == null) {
+    @JvmStatic
+    operator fun get(fontName: String): Typeface? {
+        val filename = mapping[fontName]
+        if (filename == null) {
             Log.e(TAG, "Couldn't find font $fontName.")
             return null
         }
-        if (cache.containsKey(fontFilename)) return cache[fontFilename]
-        else {
-            val typeface = Typeface.createFromAsset(context.assets, "$FONT_DIR/$fontFilename")
-            cache.put(fontFilename, typeface)
-            return typeface
-        }
+        if (cache.containsKey(filename)) return cache[filename]
+        return Typeface.createFromAsset(assets, "$DIR/$filename").apply { cache.put(filename, this) }
     }
 
     @JvmStatic @BindingAdapter("android:font")

@@ -11,6 +11,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         DataBindingUtil.setContentView(this, R.layout.activity_main);
+
+        // TextView textView = (TextView) findViewById(R.id.textView);
+
+        // Java
+        // textView.setTypeface(FontBinder.get("Alegreya-Bold"));
+
+        // Kotlin
+        // textView.typeface = FontBinder["Alegreya-Bold"]
     }
 
 }
