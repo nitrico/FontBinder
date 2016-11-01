@@ -24,9 +24,7 @@ Easy font usage in your Android XML layouts. This is a fork of **Lisa Wray**'s [
 ```gradle
 android {
     ...
-    dataBinding { 
-        enabled true 
-    }
+    dataBinding.enabled true
 }
 
 dependencies {
