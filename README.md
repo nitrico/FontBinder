@@ -13,7 +13,7 @@ Easy font usage in your Android XML layouts. This is a fork of **Lisa Wray**'s [
 * Automatic font caching
 * Homogeneous `android:font` usage
 * Tiny size: **14 KB**
-* Minimum Android SDK: **7**
+* Minimum Android SDK: **9**
 * Available through jCenter
 
 
@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
-    compile 'com.github.nitrico.fontbinder:fontbinder:1.0.3'
+    compile 'com.github.nitrico.fontbinder:fontbinder:1.0.4'
 }
 ```
 
