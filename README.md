@@ -58,7 +58,7 @@ Simply use `android:font='@{"YourFontFileNameWithoutExtension"}'` in your TextVi
 * Make sure you use `<layout>` as root tag and write the quotation marks in the right way: `'@{"file"}'` or ```"@{`file`}"```
 * Use `DataBindingUtil.setContentView(...)` or `DataBindingUtil.inflate(...)` to inflate your layouts
 * Font files must be located in your `assets\fonts\` folder
-* Android Studio may warn you in the `android:font` line with "unknown attribute". Don't worry
+* Android Studio may warn you in the `android:font` line with "unknown attribute", it's OK
 * You might want to check [**LastAdapter**](https://github.com/nitrico/LastAdapter) to use it with RecyclerView
 
 
