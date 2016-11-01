@@ -19,7 +19,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    dataBinding { enabled true }
+    dataBinding.enabled true
 }
 
 buildscript {
@@ -33,5 +33,3 @@ dependencies {
     kapt "com.android.databinding:compiler:$vGradlePlugin"
     compile project(":fontbinder")
 }
-
-kapt { generateStubs = true }

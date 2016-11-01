@@ -37,6 +37,7 @@ object FontBinder {
         }
     }
 
+    @JvmStatic
     fun add(fontName: String, fontFilename: String) = mapping.put(fontName, fontFilename)
 
     @JvmStatic

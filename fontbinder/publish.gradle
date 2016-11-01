@@ -9,15 +9,15 @@ def libTracker = libSite + '/issues'
 def libDesc = "Easy font usage in your Android XML layouts"
 def libTags = ['android', 'font', 'typeface', 'data binding', 'kotlin']
 
-group = libGroup
-version = '1.0.3'
+group libGroup
+version '1.0.4'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
 bintray {
-    user = properties.getProperty('bintray.user')
-    key = properties.getProperty('bintray.key')
+    user properties.getProperty('bintray.user')
+    key properties.getProperty('bintray.key')
     configurations = ['archives']
     pkg {
         repo = 'maven'
@@ -26,8 +26,8 @@ bintray {
         websiteUrl = libSite
         issueTrackerUrl = libTracker
         vcsUrl = libGit
-        licenses = ['Apache-2.0']
         labels = libTags
+        licenses = ['Apache-2.0']
         publish = true
         publicDownloadNumbers = true
     }
@@ -67,7 +67,7 @@ install {
 
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
+    classifier 'sources'
 }
 
 artifacts {

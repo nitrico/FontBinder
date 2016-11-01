@@ -23,7 +23,7 @@ class Initializer : ContentProvider() {
     }
 
     override fun attachInfo(context: Context, info: ProviderInfo) {
-        if (PROVIDER_AUTHORITY.equals(info.authority)) throw IllegalStateException(EXCEPTION_MESSAGE)
+        if (PROVIDER_AUTHORITY == info.authority) throw IllegalStateException(EXCEPTION_MESSAGE)
         super.attachInfo(context, info)
     }
 
