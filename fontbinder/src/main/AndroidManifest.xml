@@ -1,6 +1,6 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.nitrico.fontbinder" >
+    package="com.github.nitrico.fontbinder">
 
     <application>
 
@@ -8,7 +8,7 @@
             android:authorities="${applicationId}.Initializer"
             android:enabled="true"
             android:exported="false"
-            android:name=".Initializer" />
+            android:name=".Initializer"/>
 
     </application>
 
